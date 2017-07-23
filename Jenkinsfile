@@ -16,5 +16,10 @@ echo "NY"'''
         )
       }
     }
+    stage('Chicao') {
+      steps {
+        sh 'echo "chicago"'
+      }
+    }
   }
 }
