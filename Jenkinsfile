@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Bangalore') {
+      steps {
+        parallel(
+          "Bangalore": {
+            sh 'echo "hello world SFO"'
+            
+          },
+          "SFO": {
+            sh '''echo "Stage SF"
+echo "NY"'''
+            
+          }
+        )
+      }
+    }
+  }
+}
